@@ -48,12 +48,16 @@ int main() {
 	Node* cur = head;
 
 	// create a fill a linked list
-	for (int i = 0; i < 8; i++) {
+    int i = 0;
+	while (i < 7)
+    {
 		cur->SetData(pow(2,i));
 		cur->SetNext(new Node);
 		cur = cur->Next();
-	}
-
+	    i++;
+    }
+    cur->SetData(pow(2,i));
+	
 	// display the contents of the list
 	cur = head;
 	while (cur != NULL) {
